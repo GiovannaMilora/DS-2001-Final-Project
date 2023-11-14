@@ -1,0 +1,45 @@
+import csv 
+import matplotlib.pyplot as plt
+
+# Read in file into lists of lists 
+def read_csv(filename): 
+    """
+    
+
+    Parameters
+    ----------
+    filename : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    TYPE
+        DESCRIPTION.
+
+    """
+    
+    data_lst_str = []
+    with open(filename, 'r') as data_f:
+        reader = csv.reader(data_f)
+        # skip headers 
+        next(reader)
+        # Read in data into a list of lists
+        for row in reader:
+            data_lst_str.append(row[1:])    
+    return data_lst_str 
+
+# Convert to ints? 
+
+# Question 1: Which month has the greatest number of most streamed songs?
+
+# Question 1: Bar Chart 
+
+# Question 2: What is the correlation between a number of streams and danceabiltiy? - Scatter Plot 
+
+# Question 3: (find top 5 artists) Do popular artists have similar BPM in their songs? How much does the BPM vary for each artist
+
+# Question 3: Box plot for 5 with BPM
+
+    if __name__ == "__main__":
+        
+      
